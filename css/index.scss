@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --box: 5%;
+    --accidental-box-w: 1em;
+    --accidental-box-h: 1.5em;
+    --max-width: 60em;
+    --small-padding: .5em;
+    --big-padding: 1em;
+    --box-margin: 1em;
+}
+
+body {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(158, 158, 157);
+
+    header {
+        margin: 10em 0em;
+        max-width: var(--max-width);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3em;
+        border: 1px solid black;
+
+        p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    main {
+        width: 100%;
+        max-width: var(--max-width);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+
+        .scale-container {
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+
+            .title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: clamp(2.5rem, 3vw, 1.3rem);
+                text-align: center;
+                font-weight: 700;
+                padding: var(--big-padding) 0em var(--big-padding) 0em;
+            }
+
+            .scale-box-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+
+                .scale-box {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid rgb(3, 56, 245);
+                    padding: var(--small-padding) 0em;
+
+                    .box {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: var(--box);
+                        padding: .5em 2.5em;
+                        border: 1px solid red;
+                        margin: 0 var(--box-margin) 0 var(--box-margin);
+
+                        p {
+                            font-size: xx-large;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                .main {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid yellow;
+
+                    .box {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .box-drop-down {
+                            position: absolute;
+                            top: 0em;
+                            right: 0em;
+                            overflow: hidden;
+                            display: flex;
+                            flex-direction: column;
+                            padding: .2em;
+                            justify-content: space-between;
+                            align-items: center;
+                            border: 1px solid transparent;
+
+                            .arrow-container {
+                                transition: .3s;
+                                cursor: pointer;
+                                padding: 0em .15em;
+                                border: 1px solid transparent;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+
+                                p {
+                                    rotate: 90deg;
+                                    font-weight: 900;
+                                    font-size: 1rem;
+                                }
+
+                                img {
+                                    width: 100%;
+                                    height: 2vh;
+                                }
+                            }
+
+                            .arrow-container-reverse {
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-clip: border-box;
+
+                                p {
+                                    rotate: 270deg;
+                                    font-weight: 900;
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            .box-accidental {
+                                display: none;
+
+
+                                div img {
+                                    width: .6em;
+                                    height: 2vh;
+                                }
+                            }
+
+                            .box-accidental-hide {
+                                display: flex;
+                                flex-direction: column;
+                                border: 1px solid transparent;
+                                row-gap: .5em;
+                            }
+                        }
+
+
+                    }
+                }
+
+            }
+        }
+    }
+}
