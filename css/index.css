@@ -112,13 +112,12 @@ body main .scale-container .scale-box-container .main .box .box-drop-down {
   position: absolute;
   top: 0em;
   right: 0em;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 0.2em;
+  padding: 0.9em;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid transparent;
+  /*border: 1px solid transparent;*/
 }
 body main .scale-container .scale-box-container .main .box .box-drop-down .arrow-container {
   transition: 0.3s;
@@ -128,9 +127,23 @@ body main .scale-container .scale-box-container .main .box .box-drop-down .arrow
   display: flex;
   justify-content: center;
   align-items: center;
+  position:relative;
+
+  svg {
+       width:3em;
+       height:2em;
+       position:absolute;
+       top:-9px;
+       right:-15px;
+  }
+
+}
+
+.hidden{
+     display:none !important;
 }
 body main .scale-container .scale-box-container .main .box .box-drop-down .arrow-container p {
-  rotate: 90deg;
+  /*rotate: 90deg;*/
   font-weight: 900;
   font-size: 1rem;
 }
@@ -150,11 +163,18 @@ body main .scale-container .scale-box-container .main .box .box-drop-down .arrow
   font-size: 1rem;
 }
 body main .scale-container .scale-box-container .main .box .box-drop-down .box-accidental {
-  display: none;
+  /*display: none;*/
+     display:flex;
+     flex-flow:column;
+     gap:.5em;
+}
+
+body main .scale-container .scale-box-container .main .box .box-drop-down .box-accidental div {
+     padding:0 .5em;
 }
 body main .scale-container .scale-box-container .main .box .box-drop-down .box-accidental div img {
   width: 0.6em;
-  height: 2vh;
+  /*height: 2vh;*/
 }
 body main .scale-container .scale-box-container .main .box .box-drop-down .box-accidental-hide {
   display: flex;
